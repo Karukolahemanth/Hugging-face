@@ -1,0 +1,27 @@
+[
+  {
+    "id": "task_001",
+    "question": "Calculate (250 × 18) / 5",
+    "expected_answer": "900"
+  },
+  {
+    "id": "task_002",
+    "question": "What is the square root of 1764?",
+    "expected_answer": "42"
+  },
+  {
+    "id": "task_003",
+    "question": "Calculate 2 to the power of 15",
+    "expected_answer": "32768"
+  },
+  {
+    "id": "task_004",
+    "question": "What is the sum of numbers from 1 to 100?",
+    "expected_answer": "5050"
+  },
+  {
+    "id": "task_005",
+    "question": "What is the capital of France?",
+    "expected_answer": "Paris"
+  }
+]

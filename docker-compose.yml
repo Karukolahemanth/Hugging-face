@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - LLM_PROVIDER=${LLM_PROVIDER:-gemini}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - SEARCH_PROVIDER=${SEARCH_PROVIDER}
+      - SEARCH_API_KEY=${SEARCH_API_KEY}
+      - DATABASE_URL=sqlite:///./gaia.db
+      - MAX_AGENT_STEPS=${MAX_AGENT_STEPS:-15}
+    volumes:
+      - ./uploads:/app/uploads
+      - ./workspace:/app/workspace
+      - gaia_db:/app
+    restart: unless-stopped
+
+  frontend:
+    image: node:20-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm run build && npx serve dist -p 5173"
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+    environment:
+      - VITE_API_URL=http://backend:8000
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  gaia_db:

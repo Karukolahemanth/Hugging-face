@@ -1,0 +1,57 @@
+[
+  {
+    "task_id": "task_001",
+    "model_answer": "900",
+    "_question": "Calculate (250 × 18) / 5",
+    "_expected": "900",
+    "_correct": true,
+    "_elapsed_s": 3.6,
+    "_steps": 2,
+    "_status": "completed",
+    "_level": 1
+  },
+  {
+    "task_id": "task_002",
+    "model_answer": "42",
+    "_question": "What is the square root of 1764?",
+    "_expected": "42",
+    "_correct": true,
+    "_elapsed_s": 2.9,
+    "_steps": 2,
+    "_status": "completed",
+    "_level": 1
+  },
+  {
+    "task_id": "task_003",
+    "model_answer": "32768",
+    "_question": "Calculate 2 to the power of 15",
+    "_expected": "32768",
+    "_correct": true,
+    "_elapsed_s": 2.7,
+    "_steps": 2,
+    "_status": "completed",
+    "_level": 1
+  },
+  {
+    "task_id": "task_004",
+    "model_answer": "5050",
+    "_question": "What is the sum of numbers from 1 to 100?",
+    "_expected": "5050",
+    "_correct": true,
+    "_elapsed_s": 2.9,
+    "_steps": 2,
+    "_status": "completed",
+    "_level": 1
+  },
+  {
+    "task_id": "task_005",
+    "model_answer": "Paris",
+    "_question": "What is the capital of France?",
+    "_expected": "Paris",
+    "_correct": true,
+    "_elapsed_s": 1.6,
+    "_steps": 1,
+    "_status": "completed",
+    "_level": 1
+  }
+]
